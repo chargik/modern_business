@@ -144,11 +144,16 @@ INSTALLED_APPS = (
     'cmsplugin_filer_folder',
     'cmsplugin_filer_image',
     'cmsplugin_filer_utils',
-    'djangocms_style',
+    # 'djangocms_style',
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-    'modern_business'
+
+    'aldryn_bootstrap3',
+    'aldryn_style', 
+    'mptt',
+
+    'modern_business',
 )
 
 LANGUAGES = (
@@ -177,8 +182,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
-    # ('sidebar_left.html', 'Sidebar Left'),
-    # ('sidebar_right.html', 'Sidebar Right')
+    ('home.html', 'Home'),
 )
 
 CMS_PERMISSION = True
@@ -207,3 +211,29 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+CKEDITOR_SETTINGS = {
+    'stylesSet': [
+        {
+            'name': 'Page Header H1',
+            'element': 'h1',
+            'attributes': {
+                'class': 'page-header',
+            },
+        },
+        {
+            'name': 'Page Header H2',
+            'element': 'h2',
+            'attributes': {
+                'class': 'page-header',
+            },
+        },
+        {
+            'name': 'Page Header H3',
+            'element': 'h3',
+            'attributes': {
+                'class': 'page-header',
+            },
+        },
+    ]
+}
